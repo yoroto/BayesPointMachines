@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC4FECBE-A2F5-450C-9479-42698C456EB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocumentQuery.Core</RootNamespace>
+    <AssemblyName>DocumentQuery.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infer.Compiler">
+      <HintPath>..\..\..\..\Infer.NET 2.4\bin\Release\Infer.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Infer.Runtime">
+      <HintPath>..\..\..\..\Infer.NET 2.4\bin\Release\Infer.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassifiedVectorsMachine.cs" />
+    <Compile Include="Dataset.cs" />
+    <Compile Include="MachineBase.cs" />
+    <Compile Include="ModelBase.cs" />
+    <Compile Include="MultiClassBayesPointMachine\TrainClass.cs" />
+    <Compile Include="SharedVariablesBayesPointMachine\Machine.cs" />
+    <Compile Include="SharedVariablesBayesPointMachine\TrainClass.cs" />
+    <Compile Include="VectorsTrainModel.cs" />
+    <Compile Include="ClassifiedDataset.cs" />
+    <Compile Include="UnclassifiedDataset.cs" />
+    <Compile Include="DatasetFormatException.cs" />
+    <Compile Include="DataVector.cs" />
+    <Compile Include="MultiClassBayesPointMachine\Machine.cs" />
+    <Compile Include="MultiClassBayesPointMachine\TestModel.cs" />
+    <Compile Include="MultiClassBayesPointMachine\TrainModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedVariablesBayesPointMachine\TestModel.cs" />
+    <Compile Include="SharedVariablesBayesPointMachine\TrainModel.cs" />
+    <Compile Include="SimpleBayesPointMachine.cs" />
+    <Compile Include="StaticUtils.cs" />
+    <Compile Include="VectorsTestModel.cs" />
+    <Compile Include="VectorsTrainClass.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
